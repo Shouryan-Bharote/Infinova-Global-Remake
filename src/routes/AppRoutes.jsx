@@ -10,11 +10,14 @@ import BlogPage from "../pages/BlogPage/BlogPage";
 import EduventuresCourses from "../pages/EduventuresCoursesPage/EduventuresCoursesPage";
 import CourseFormPage from "../pages/CourseFormPage/CourseFormPage";
 import ComingSoon from "../pages/comingsoon/comingsoon";
+import ScrollToTop from "../components/ScrollToTop";
 
 
 
 const AppRoutes = () => {
   return (
+  <>
+  <ScrollToTop/>
     <Routes>
       {/* Main Pages */}
       <Route path="/" element={<Home />} />
@@ -43,11 +46,12 @@ const AppRoutes = () => {
           <h1 className="text-6xl font-bold text-[#4A1D1F] mb-4">404</h1>
           <p className="text-xl text-[#6B4A38] mb-8">Page not found</p>
           <a href="/" className="bg-[#5C3D2E] text-[#F5E6D3] px-8 py-3 rounded-lg hover:bg-[#6B4A38] transition-colors">
-            Go Home
+          Go Home
           </a>
-        </div>
+          </div>
       </div>} /> */}
     </Routes>
+          </>
   );
 };
 

@@ -1,0 +1,87 @@
+/* Card styling */
+.card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  width: 320px;
+  min-width: 300px;
+  flex-shrink: 0;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card .division-info-img {
+  margin-left: 10px;
+  padding: 20px;
+  width: 90px;
+}
+
+.card p {
+  font-size: 0.99rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Logo card - ORIGINAL SIZE RESTORED */
+.division-logo-card {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.division-logo-img {
+  max-width: 250px; /* Original responsive size */
+  height: auto;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: -6px 6px 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Mobile adjustments - LOGOS STAY SAME SIZE */
+@media (max-width: 768px) {
+  .card {
+    width: 280px;
+    min-width: 260px;
+    padding: 20px;
+  }
+
+  /* Logo stays original size - no change */
+  .division-logo-img {
+    max-width: 250px;
+  }
+
+  .division-info-img {
+    width: 80px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 260px;
+    min-width: 240px;
+    padding: 18px;
+  }
+
+  /* Logo stays original size - no change */
+  .division-logo-img {
+    max-width: 250px;
+  }
+
+  .division-info-img {
+    width: 70px;
+    padding: 12px;
+  }
+}

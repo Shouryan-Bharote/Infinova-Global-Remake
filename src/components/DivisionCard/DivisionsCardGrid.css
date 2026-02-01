@@ -1,0 +1,91 @@
+.divisions-grid-container {
+  position: relative;
+  width: 100%;
+}
+
+/* DESKTOP: 3 cards in perfect row */
+.cards-desktop {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 160px 0 210px;
+  max-width: 1200px;
+}
+
+.cards-mobile {
+  display: none;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  touch-action: pan-y; /* Allow vertical scroll, disable horizontal */
+  user-select: none; /* Prevent text selection during swipe */
+}
+
+.cards-carousel {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+  gap: 0;
+}
+
+.cards-carousel > * {
+  flex: 0 0 100%;
+}
+
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #d1d5db;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot.active,
+.dot:hover {
+  background: #2563eb;
+  transform: scale(1.3);
+}
+
+/* MOBILE: Swipe + Dots */
+@media (max-width: 768px) {
+  .cards-desktop {
+    display: none !important;
+  }
+  
+  .cards-mobile {
+    display: block !important;
+  }
+
+  .carousel-wrapper {
+    /* Enable smooth touch swiping */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .pagination-dots {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination-dots {
+    gap: 8px;
+    margin-top: 18px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
