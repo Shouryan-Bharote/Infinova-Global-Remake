@@ -12,8 +12,6 @@ import CourseFormPage from "../pages/CourseFormPage/CourseFormPage";
 import ComingSoon from "../pages/comingsoon/comingsoon";
 import ScrollToTop from "../components/ScrollToTop";
 
-
-
 const AppRoutes = () => {
   return (
   <>
@@ -30,26 +28,17 @@ const AppRoutes = () => {
         <Route path="/coming-soon" element={<ComingSoon/>} />
         <Route path="/courses" element={<EduventuresCourses />} />
         <Route path="/course-form" element={<CourseFormPage />} />
-        
-        
-        
-        {/* <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/careers" element={<CareersPage />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/mission" element={<Mission />} />
-        <Route path="/vision" element={<Vision />} />
-        <Route path="/blog" element={<Blog />} /> */}
 
       {/* 404 Not Found - Optional */}
-      {/* <Route path="*" element={<div className="min-h-screen flex items-center justify-center bg-[#FFF5DC]">
+      <Route path="*" element={<div className="min-h-screen flex items-center justify-center bg-[#FFFFFF]">
         <div className="text-center">
-          <h1 className="text-6xl font-bold text-[#4A1D1F] mb-4">404</h1>
-          <p className="text-xl text-[#6B4A38] mb-8">Page not found</p>
-          <a href="/" className="bg-[#5C3D2E] text-[#F5E6D3] px-8 py-3 rounded-lg hover:bg-[#6B4A38] transition-colors">
-          Go Home
+          <h1 className="text-6xl font-bold text-[#000000] mb-4">404</h1>
+          <p className="text-xl text-[#000000] mb-8">Page not found</p>
+          <a href="/" className="bg-[#2563EB] text-[#000000] px-8 py-3 rounded-lg hover:bg-[#0f2657] transition-colors">
+          Home
           </a>
           </div>
-      </div>} /> */}
+      </div>} />
     </Routes>
           </>
   );
