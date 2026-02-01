@@ -1,0 +1,149 @@
+/* clients page */
+/* ===== Clients Section ===== */
+.clients-section {
+  /* margin-top: 4rem; */
+  margin-bottom: 4rem;
+  padding: 0rem 1rem;
+}
+
+/* Heading */
+.clients-heading {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+/* Clients marquee css  */
+
+.logo-slider {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.logo-track {
+  display: flex;
+  gap: 50px; /* space between logos */
+  animation: scroll 18s linear infinite;
+}
+
+.logo {
+  flex: 0 0 auto;
+}
+
+.logo img {
+  max-width: 150px;   /* responsive size */
+  width: 100%;
+  height: 50px;
+  display: block;
+}
+
+/* Animation */
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 100px;
+  }
+  .logo-track {
+    gap: 20px;
+    animation: scroll 10s linear infinite;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 80px;
+  }
+  .logo-track {
+    gap: 15px;
+    animation: scroll 5s linear infinite;
+  }
+}
+
+
+
+/* Why Choose Us Heading */
+.choose-heading {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+/* Stats Grid */
+.stats-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  font-family: "Montserrat", sans-serif;
+  gap: 2rem;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+#stats-Team{
+  margin-right: 0.5rem;
+}
+
+/* Cards */
+.stats-card {
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px #00000061;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  text-align: center;
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Icons inside cards */
+.stats-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #3b82f6;
+  margin-bottom: 0.75rem;
+}
+
+
+/* Numbers inside cards */
+.stats-number {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+/* Labels inside cards */
+.stats-label {
+  font-size: 1.125rem;
+  color: #4b5563;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.hamburgerIcon{
+  font-size: 5rem;
+}
+
+ /* Clinet Section  */
+  
+ .clients-section {
+  margin:  -5rem 0rem 3rem 0rem;
+ }

@@ -1,22 +1,37 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import './Navbar.css'
+import './Navbar.css';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  // Navigation links JSON
+  const navLinksData = {
+    mobileMenu: [
+      { id: 1, label: "Eduventures", path: "/eduventures" },
+      { id: 2, label: "Consultants", path: "/coming-soon" },
+      { id: 3, label: "Technology", path: "/coming-soon" },
+      { id: 4, label: "Mission", path: "/coming-soon" },
+      { id: 5, label: "Vision", path: "/coming-soon" },
+      { id: 6, label: "Blog", path: "/coming-soon" }
+    ],
+    desktopMenu: [
+      { id: 1, label: "About Us", path: "/about-us" },
+      { id: 2, label: "Careers", path: "/careers" },
+      { id: 3, label: "Contact Us", path: "/contact-us" }
+    ]
+  };
 
   const handleClick = () => {
     setOpen(!open);
   };
 
-  // Closes the menu
   const closeMenu = () => {
     setOpen(false);
   };
 
   return (
     <nav className="outerNavDiv">
-      
       {/* Sidebar Overlay */}
       <div 
         className={`overlay ${open ? 'open' : ''}`} 
@@ -49,36 +64,13 @@ const Navbar = () => {
           </div>
 
           <ul className="menuList">
-            <NavLink to="/eduventures">
-              <li className="listItems" onClick={closeMenu}>
-                Eduventures
-              </li>
-            </NavLink>
-            <NavLink to="/coming-soon">
-              <li className="listItems" onClick={closeMenu}>
-                Consultants
-              </li>
-            </NavLink>
-            <NavLink to="/coming-soon">
-              <li className="listItems" onClick={closeMenu}>
-                Technology
-              </li>
-            </NavLink>
-            <NavLink to="/coming-soon">
-              <li className="listItems" onClick={closeMenu}>
-                Mission
-              </li>
-            </NavLink>
-            <NavLink to="/coming-soon">
-              <li className="listItems" onClick={closeMenu}>
-                Vision
-              </li>
-            </NavLink>
-            <NavLink to="/coming-soon">
-              <li className="listItems" onClick={closeMenu}>
-                Blog
-              </li>
-            </NavLink>
+            {navLinksData.mobileMenu.map((link) => (
+              <NavLink key={link.id} to={link.path}>
+                <li className="listItems" onClick={closeMenu}>
+                  {link.label}
+                </li>
+              </NavLink>
+            ))}
           </ul>
         </div>
       </div>
@@ -103,7 +95,7 @@ const Navbar = () => {
           
           <NavLink to="/">
             <img
-              src="/global_Logo_black.png"
+              src="NavbarIcons/global_Logo_black.png"
               alt="Global Logo"
               className="globalIcon2"
             />
@@ -113,15 +105,11 @@ const Navbar = () => {
         {/* Desktop Navigation Links */}
         <div className="navbarList2">
           <ul>
-            <NavLink to="/about-us">
-              <li>About Us</li>
-            </NavLink>
-            <NavLink to="/careers">
-              <li>Careers</li>
-            </NavLink>
-            <NavLink to="/contact-us">
-              <li>Contact Us</li>
-            </NavLink>
+            {navLinksData.desktopMenu.map((link) => (
+              <NavLink key={link.id} to={link.path}>
+                <li>{link.label}</li>
+              </NavLink>
+            ))}
           </ul>
         </div>
       </div>
