@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Eduventures from '../Eduventures';
+import './Divisions.css';
+// import Eduventures from '../Eduventures';
 
 const Divisions = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const Divisions = () => {
             onClick={() => navigate('/eduventures')}
           >
             <img
-              src="/Edu_Logo.svg"
+              src="HomePage/Divisions/Edu_Logo.svg"
               alt="Eduventures"
               className="division-logo-img"
             />
@@ -29,7 +30,7 @@ const Divisions = () => {
 
           <div className="division-info-card flex items-center flex-col">
             <img
-              src="/textBook.png"
+              src="HomePage/Divisions/textBook.png"
               alt="Education"
               className="division-info-img"
             />
@@ -58,7 +59,7 @@ const Divisions = () => {
             onClick={() => navigate('/coming-soon')}
           >
             <img
-              src="/CON_Logo.svg"
+              src="HomePage/Divisions/CON_Logo.svg"
               alt="Consultants"
               className="division-logo-img"
             />
@@ -66,7 +67,7 @@ const Divisions = () => {
 
           <div className="division-info-card flex items-center flex-col">
             <img
-              src="/growth.png"
+              src="HomePage/Divisions/growth.png"
               alt="Strategy"
               className="division-info-img"
             />
@@ -95,7 +96,7 @@ const Divisions = () => {
             onClick={() => navigate('/coming-soon')}
           >
             <img
-              src="/TECH_Logo.svg"
+              src="HomePage/Divisions/TECH_Logo.svg"
               alt="Technologies"
               className="division-logo-img"
             />
@@ -103,7 +104,7 @@ const Divisions = () => {
 
           <div className="division-info-card flex items-center flex-col">
             <img
-              src="/light.png"
+              src="HomePage/Divisions/light.png"
               alt="Innovation"
               className="division-info-img"
             />
